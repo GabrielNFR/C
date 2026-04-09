@@ -157,6 +157,7 @@ int main(void)
         {
             for (int j = 0; j < vOut[i].qtdIngredientes; j++)
             {
+                free(vOut[i].listaIngredientes[j]->nome);
                 free(vOut[i].listaIngredientes[j]);
             }
             free(vOut[i].listaIngredientes);
